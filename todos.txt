@@ -1,0 +1,219 @@
+01-
+#include <stdio.h>
+
+int main() {
+    int num1, num2, soma;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &num1);
+
+    printf("Digite o segundo numero: ");
+    scanf("%d", &num2);
+
+    soma = num1 + num2;
+
+    printf("A soma dos numeros eh: %d", soma);
+
+    return 0;
+}
+
+// Este programa lê dois números inteiros, armazena-os em duas variáveis, calcula a soma desses números e imprime o resultado na tela.
+
+02-
+#include <stdio.h>
+
+#define PI 3.14159 // Definindo o valor de pi como constante
+
+int main() {
+    float raio, area;
+
+    printf("Digite o raio do circulo: ");
+    scanf("%f", &raio);
+
+    area = PI * raio * raio;
+
+    printf("A area do circulo e: %f", area);
+
+    return 0;
+}
+
+//Calcula a área de um círculo a partir do valor do raio fornecido pelo usuário e exibe o resultado na tela. 
+//Usa a constante PI para fazer o cálculo da área e as funções printf() e scanf() para interagir com o usuário.
+
+03-
+#include <stdio.h>
+
+int main() {
+    int num;
+    
+    printf("Digite um numero: ");
+    scanf("%d", &num);
+    
+    if (num % 2 == 0) {
+        printf("%d eh par.", num);
+    } else {
+        printf("%d eh impar.", num);
+    }
+    
+    return 0;
+}
+
+//Neste programa, o usuário digita um número utilizando a função printf, e a entrada é lida com a função scanf. 
+//Em seguida, verificamos se o número é divisível por 2, utilizando o operador %, que retorna o resto da divisão entre dois números. 
+//Se o resto for 0, o número é par, caso contrário, é ímpar. Finalmente, utilizamos a função printf para exibir uma mensagem informando se 
+//o número é par ou ímpar.
+
+04-
+#include <stdio.h>
+
+int main() {
+    float a, b, c, media;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%f", &a);
+
+    printf("Digite o segundo numero: ");
+    scanf("%f", &b);
+    
+    printf("Digite o terceiro numero: ");
+    scanf("%f", &c);
+
+    media = (a+b+c) / 3;
+
+    printf("A media aritmetica dos tres numeros eh: %f", media);
+
+    return 0;
+}
+
+//O programa lê três números e calcula a média aritmética entre eles. Em seguida, imprime o resultado na tela.
+
+05-
+#include <stdio.h>
+
+int main() {
+    int a,ant,suc;
+    
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &a);
+    
+    ant = a - 1;
+    
+    suc = a + 1;
+    
+    printf("O antecessor eh: %d\n", ant);
+    printf("O sucessor eh: %d", suc);
+    
+    return 0;
+}
+
+//Calcula o antecessor e o sucessor de um número inteiro e exibe os resultados na tela. Ele usa as variáveis a, ant e suc para armazenar os 
+//valores do número digitado, antecessor e sucessor, respectivamente. As funções printf() e scanf() são usadas para interagir com o usuário.
+
+06-
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double num;
+    
+    printf("Digite um numero real: ");
+    scanf("%lf", &num);
+    
+    int parte_inteira = (int) floor(num);
+    
+    printf("A parte inteira de %.2lf eh %d", num, parte_inteira);
+    
+    return 0;
+}
+
+//Neste programa, pedimos ao usuário para digitar um número real utilizando a função printf, e lemos a entrada do usuário utilizando a função scanf. 
+//Em seguida, utilizamos a função floor da biblioteca math.h para arredondar o número para baixo e obter sua parte inteira. Como a função floor 
+//retorna um valor do tipo double, é necessário fazer um cast para o tipo int para obter a parte inteira como um número inteiro. Por fim, exibimos a 
+//parte inteira do número utilizando a função printf.
+
+07-
+#include <stdio.h>
+
+int main() {
+    int idade;
+
+    printf("Digite a sua idade: ");
+    scanf("%d", &idade);
+
+    if (idade >= 18) {
+        printf("Voce eh adulto!\n");
+    } else {
+        printf("Voce eh menor de idade!\n");
+    }
+
+    return 0;
+}
+
+//lê a idade digitada pelo usuário e, em seguida, faz uma verificação através do comando if. Caso a idade seja maior ou igual a 18 anos, 
+//é exibida a mensagem "Voce eh adulto!". Caso contrário, é exibida a mensagem "Voce eh menor de idade!".
+
+08-
+#include <stdio.h>
+
+int main() {
+    float celsius, fahrenheit;
+    
+    printf("Digite a temperatura em graus Celsius: ");
+    scanf("%f", &celsius);
+    
+    fahrenheit = (celsius * 1.8) + 32;
+    
+    printf("A temperatura em Fahrenheit eh: %.2f", fahrenheit);
+    
+    return 0;
+}
+
+//Para converter graus Celsius para Fahrenheit, podemos utilizar a seguinte fórmula: F = (C * 1.8) + 32
+//lê a temperatura em graus Celsius e converte para Fahrenheit, utilizando a fórmula de conversão. Em seguida, 
+//imprime o resultado na tela com duas casas decimais.
+
+09-
+#include <stdio.h>
+
+int main() {
+    int num, i = 1;
+    
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &num);
+    
+    printf("Tabuada do %d:\n", num);
+    while (i <= 10) {
+        printf("%d x %d = %d\n", num, i, num * i);
+        i++;
+    }
+    
+    return 0;
+}
+
+//Neste programa, pedimos ao usuário para digitar um número inteiro utilizando a função printf, e lemos a entrada do usuário utilizando a função scanf. 
+//Em seguida, inicializamos uma variável i com o valor 1 e utilizamos um loop while para imprimir a tabuada do número digitado pelo usuário. Enquanto o 
+//valor de i for menor ou igual a 10, calculamos o resultado da multiplicação entre num e i e exibimos a operação e o resultado utilizando a função printf, 
+//e então incrementamos o valor de i em 1. Quando o valor de i atingir 11, o loop é interrompido.
+
+10-
+#include <stdio.h>
+
+int main() {
+    char nome[70];
+    int idade;
+
+    printf("Digite seu nome: ");
+    scanf("%s", nome);
+
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+
+    printf("Olah, %s! Voce tem %d anos.", nome, idade);
+
+    return 0;
+}
+
+//começa solicitando ao usuário que digite o nome e a idade. Em seguida, a função printf exibe uma saudação 
+//personalizada com as informações inseridas.
+
+
